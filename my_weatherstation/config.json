@@ -1,0 +1,11 @@
+{
+  "wifi_ssid":"ssid",
+  "wifi_pwd":"pwd",
+  "hostname":"my_odroid",
+  "mqtt_server":"broker",
+  "mqtt_port":"1883",
+  "mqtt_user":"",
+  "mqtt_pwd":"",
+  "mqtt_client_id":"my_odroid",
+  "icon_path":"/icons/owm/"
+}
