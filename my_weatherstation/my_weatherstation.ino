@@ -582,11 +582,18 @@ void setup() {
   Serial.begin(115200);
   // ODROID-Zeugs initialisieren
   GO.begin();
+  
   // SD-Karte
   if (!SD.begin(22)) {
     Serial.println("SD-Card failed!");
     while (1);
   }
+  // Ego :-)
+  GO.lcd.drawJpgFile(SD, "/uwe.jpg", 60, 20);
+  GO.Speaker.setVolume(8); //11 silent - 0 full volume? 
+  GO.Speaker.playMusic(m5stack_startup_music, 25000);
+  GO.Speaker.setVolume(11);
+  GO.lcd.clearDisplay();
   // Konfiguration von SD-Karte einlesen (, wenn Datei vorhanden)
   load_config();
   // aktuelle Konfiguration auf Display ausgeben
